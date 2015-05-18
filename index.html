@@ -45,7 +45,7 @@ colorize()
 <h3 class="box-title">Latest release: 14.07</h3>
 <ul>
 <li><a href="http://wiki.openwrt.org/doc/start">Documentation</a></li>
-<li><a href="http://wiki.openwrt.org/doc/howto/installopenwrt">Download & Install</a></li>
+<li><a href="http://wiki.openwrt.org/doc/howto/installopenwrt">Download &amp; Install</a></li>
 </ul>
 </div>
 <div class="box">
@@ -61,15 +61,12 @@ colorize()
 <div class="box">
 <h3 class="box-title">Headlines</h3>
 <ul>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=145689#p145689'><p>OpenWrt merchandise</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=144733#p144733'><p>SamKnows to measure European broadband with OpenWrt devices</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=139188#p139188'><p>Backfire 10.03.1-rc5</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=130054#p130054'><p>OpenWrt and Gsoc 2011</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=126827#p126827'><p>Wireless Battle Mesh v4 (16-20 03-2011, Sant Bartomeu del Grau, Spain)</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=135002#p135002'><p>Backfire 10.03.1-rc4</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=119871#p119871'><p>Comcast IPv6 and OpenWrt</p></a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=116062#p116062'><p>Backfire 10.03.1-rc3</p></a></li>
-<li><a href="https://forum.openwrt.org/viewforum.php?id=11">more...</a></li>
+<li><a href='#'>Chaos Calmer Release (soon)</a></li>
+<li><a href='http://wiki.openwrt.org/doc/barrier.breaker'>Barrier Breaker Release</a></li>
+<li><a href='https://forum.openwrt.org/viewtopic.php?pid=272044#p272044'>BattleMesh 8</a></li>
+<li><a href='https://forum.openwrt.org/viewtopic.php?pid=145689#p145689'>OpenWrt merchandise</a></li>
+<li><a href='https://forum.openwrt.org/viewtopic.php?pid=144733#p144733'>SamKnows to measure European broadband with OpenWrt devices</a></li>
+<li><a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Earlier news...</a></li>
 </ul>
 </div>
 <div>
@@ -82,21 +79,29 @@ colorize()
 <a href="http://atw.co.hu"><img src="http://openwrt.org/include/atw_logo.jpg" class="hosted_at" alt="Server hosted at ATW" title="Hosted at ATW" /></a>
 </div>
 <div class="content pad-right">
+
+<div class='box'><h3 class='box-title'><p>About this redesigned home page...</p></h3>
+<h4>About this page...</h4>
+<i>This page is a draft of a re-designed home page for the OpenWrt project. It attempts to preserve all the important and timely information, as well as reassuring people who are new to the project that OpenWrt would be a good choice for them. Please place any comments about this page on the Forum in the <a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Initiate to improve OpenWrt documentation</a> page. Thanks! -richbhanover </i>
+</div>
+
 <div class='box'><h3 class='box-title'><p>What is OpenWrt?</p></h3>
 
 <h4>What is OpenWrt?</h4>
 <p>OpenWrt is a Linux distribution for embedded devices.
-It is a really good replacement firmware for home routers, and for other kinds of equipment, too. 
+It is an excellent replacement for the stock firmware for home routers, and for other kinds of equipment, too. 
 
 <h4>Why should I use OpenWrt?</h4> 
-<p>People replace the stock firmware of their home router with OpenWrt. 
-Why? Without naming names, most vendor firmware is buggy, insecure, and not well maintained. Router manufacturers suffer from incredibly low profit margins, so they skimp on the development and testing of their stock firmware. 
+<p>People frequently replace the stock firmware of their home router with OpenWrt. 
+Why? Router manufacturers suffer from incredibly low profit margins, so frequently they skimp on the development and testing of their stock firmware. 
+Without naming names, most vendor firmware is buggy, insecure, and not well maintained. 
 </p>
 
 <p>On the other hand, we love to write software - <i>really good</i> software. People who use OpenWrt get tremendous benefits in stability of their network connection, rarely have to reboot their router, and often get higher speeds with low latency. Their router just works better. </p>
 
-<h4>Is it difficult to use?</h4>
-<p> No, although it might be a little more work than using stock firmware. There are <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">good guides</a> for popular routers, and once it's installed and running, most people can simply forget that it's there.
+<h4>Is it easy to use?</h4>
+<p> Yes. After you flash the OpenWrt firmware, you can use a web-based GUI to configure your router. 
+Don't worry, there are <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">good guides</a> for popular routers, and once it's installed and running, most people can simply forget that it's there.
 </p>
 
 <h4>What's the next step?</h4>
@@ -105,95 +110,224 @@ Why? Without naming names, most vendor firmware is buggy, insecure, and not well
 
 <h4>Can I use OpenWrt on other equipment?</h4>
 
-<p>Yes. The Table of Hardware lists many other platforms where OpenWrt runs. 
+<p>Yes. The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devices</a> page lists many other platforms where OpenWrt runs. 
 </p>
 
 <h4>Why did you create OpenWrt?</h4>
-<p>As we said, we love to write software. Instead of trying to create a single, static firmware that mimics the worst aspects of vendor's stock firmware, OpenWrt provides a fully writable filesystem with package management. 
-This frees you from the application selection and configuration provided by the vendor and allows you to customize the device through the use of packages to suit any application. For developer, OpenWrt is the framework to build an application without having to build a complete firmware around it; for users this means the ability for full customization, to use the device in ways never envisioned.</p><p>&gt; <a href="http://wiki.openwrt.org/toh/start">Supported Devices</a></p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=29540#p29540'>Comments</a>
+<p>As we said, we love to write software. Instead of trying to create a single, static firmware that simply clones the worst aspects of vendor's stock firmware, OpenWrt provides a fully writable filesystem with package management. 
+This frees you from the application selection and configuration provided by the vendor and allows you to customize the device through the use of packages to suit any application. For developer, OpenWrt is the framework to build an application without having to build a complete firmware around it; for users this means the ability for full customization, to use the device in ways never envisioned.</p>
+
+<h4>How can I get more information about OpenWrt?</h4>
+<p>The Documentation page at <a href="http://wiki.openwrt.org/doc/start">http://wiki.openwrt.org/doc/start</a> is a good place to start. You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to ask questions and read current information about the project.
+</p>
 </div>
 <!-- -->
 
 
 <div class='box'><h3 class='box-title'><p>OpenWrt BarrierBreaker 14.07 - September 2014</p></h3>
-<p>September 2014: The OpenWrt developers are proud to announce the final release of OpenWrt Barrier Breaker.</p><div class="codebox"><pre><code>  _______                     ________        __
- |       |.-----.-----.-----.|  |  |  |.----.|  |_
- |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
- |_______||   __|_____|__|__||________||__|  |____|
-          |__| W I R E L E S S   F R E E D O M
- -----------------------------------------------------
- BARRIER BREAKER (14.07)
- -----------------------------------------------------
-  * 1/2 oz Galliano         Pour all ingredients into
-  * 4 oz cold Coffee        an irish coffee mug filled
-  * 1 1/2 oz Dark Rum       with crushed ice. Stir.
-  * 2 tsp. Creme de Cacao
- -----------------------------------------------------</code></pre></div><p><a href="http://downloads.openwrt.org/barrier_breaker/14.07/">http://downloads.openwrt.org/barrier_breaker/14.07/</a></p>
+<p>September 2014: The OpenWrt developers are proud to announce the final release
+of OpenWrt Barrier Breaker.
+<pre class="code">   _______                     ________        __
+  |       |.-----.-----.-----.|  |  |  |.----.|  |_
+  |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+  |_______||   __|_____|__|__||________||__|  |____|
+           |__| W I R E L E S S   F R E E D O M
+  -----------------------------------------------------
+  BARRIER BREAKER (14.07)
+  -----------------------------------------------------
+   * 1/2 oz Galliano         Pour all ingredients into
+   * 4 oz cold Coffee        an irish coffee mug filled
+   * 1 1/2 oz Dark Rum       with crushed ice. Stir.
+   * 2 tsp. Creme de Cacao
+  -----------------------------------------------------</pre>
 
- 
+</p>
 
- <h4>Highlights since the previous release (Attitude Adjustment, 12.09) </h4>
- <p></p>
+<p>
+<a href="http://downloads.openwrt.org/barrier_breaker/14.07/" class="urlextern" title="http://downloads.openwrt.org/barrier_breaker/14.07/"  rel="nofollow">http://downloads.openwrt.org/barrier_breaker/14.07/</a>
+</p>
+
+<p>
+<strong>Important changes since RC3</strong>
+</p>
 <ul>
- <li>Default configuration and images
- <li>Linux kernel updated to version 3.10
- <li>Procd: new preinit, init, hotplug and event system written in C
- <li> Native IPv6-support
-  <ul>
-	<li> RA &amp; DHCPv6+PD client and server
-	<li> Local prefix allocation &amp; source-restricted routes<br />&nbsp; &nbsp;&nbsp; &nbsp;(multihoming)
-  </ul>
-<li>Extended IPv6-support
-  <ul>
-  <li> Added DS-Lite support and improved 6to4, 6in4 and 6rd-support
-  <li> Experimental support for Lightweight 4over6, MAP-E and MAP-T
-  <li> Draft-support for self-managing home networks (HNCP)
-  </ul>
- <li> Filesystem improvements
-  <ul>
-	<li> Added support for sysupgrade on NAND-flash
-	<li> Added support for filesystem snapshot and rollback
-	<li> Rewritten mounting system in C for rootfs and block devices
-  </ul>
- <li> UCI configuration improvements
-  <ul>
-	<li> Support for testing configuration and rollback to working &nbsp; &nbsp; <br />&nbsp; &nbsp;&nbsp; &nbsp;last working state
-	<li> Unified change trigger system to restart services on-demand
-	<li> Added a data validation layer
-  </ul>
- <li> Networking improvements
-  <ul>
-	<li> Netifd now handles setup and configuration reload of<br />&nbsp; &nbsp;&nbsp; &nbsp;wireless interfaces
-	<li> Added reworked event support to allow obsoleting network<br />&nbsp; &nbsp;&nbsp; &nbsp;hotplug-scripts
-	<li> Added support for dynamic firewall rules and zones
-	<li> Added support for transparent multicast to unicast<br />&nbsp; &nbsp;&nbsp; &nbsp;translation for bridges
-	<li> Various other fixes and improvements
-  </ul>
-<li>Additional highlights selectable in the package feeds or SDK
-  
-<li> rpcd: new JSONRPC over HTTP-frontend for remote access to ubus
-<li> mdns: new lightweight mdns daemon (work in progress)
-<li> Initial support for the musl C standard library
-<li> Support for QMI-based 3g/4g modems
-<li> Support for DNSSEC validation
-<li> Added architecture for package signing and SHA256 hashing
-<li> ... and many more cool things
+<li class="level1"><div class="li"> various ath9k related fixes</div>
+</li>
+<li class="level1"><div class="li"> a few board related fixes</div>
+</li>
+<li class="level1"><div class="li"> fixes for packages depdending on curl</div>
+</li>
+<li class="level1"><div class="li"> per feed download folders</div>
+</li>
 </ul>
 
-<h4>Package feed reorganization</h4>
-<p>For quite a while already we are not very satisfied with the quality<br />of the packages-feed. To address this, we decided to do a fresh start<br />on GitHub. The new feed <a href="https://github.com/openwrt/packages">https://github.com/openwrt/packages</a> should be<br />used from now on and package maintainers are asked to move their<br />packages there. For the final release we will still build the old<br />packages feed but it will be necessary to enable it manually in the<br />opkg package list to be usable.
+<p>
+<strong>Important changes since RC2</strong>
 </p>
-<p>Additionally we would like to give a big thank you to all of our package<br />maintainers working on our various feeds.</p>
+<ul>
+<li class="level1"><div class="li"> NAT &amp; firewall throughput improvements</div>
+</li>
+<li class="level1"><div class="li"> Security updates for OpenSSL &amp; PolarSSL</div>
+</li>
+<li class="level1"><div class="li"> Minor fixes in DHCP &amp; DHCPv6 handling</div>
+</li>
+<li class="level1"><div class="li"> Configuration support for GRE tunnels</div>
+</li>
+<li class="level1"><div class="li"> Various other fixes</div>
+</li>
+</ul>
 
-<h4>New build servers</h4>
-<p>We would like to express our gratitude to Imagination Technology for<br />funding the 2 build servers that we used for the release.</p>
+<p>
+<strong>Important changes since RC1</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> fix a long standing ath9k deadlock bug</div>
+</li>
+<li class="level1"><div class="li"> all feeds are now built</div>
+</li>
+<li class="level1"><div class="li"> image builder now works and RC2 contains all board specific images</div>
+</li>
+<li class="level1"><div class="li"> various board/stability fixes</div>
+</li>
+</ul>
 
-<h4>Whats next ?</h4>
-We aim at releasing Chaos Calmer (CC) before the end of the year. The<br />CC release will use 3.14 or a newer LTS kernel as baseline.</p><br /><br /><p>Have fun!<br />&nbsp; &nbsp; The OpenWrt developer team</p>
-<h3>Changes leading up to the final build</h3>
-<p>** Important changes since RC3 **<br />* various ath9k related fixes<br />* a few board related fixes<br />* fixes for packages depdending on curl<br />* per feed download folders
-<li>* Important changes since RC2 **<br />* NAT &amp; firewall throughput improvements<br />* Security updates for OpenSSL &amp; PolarSSL<br />* Minor fixes in DHCP &amp; DHCPv6 handling<br />* Configuration support for GRE tunnels<br />* Various other fixes
-<li>* Important changes since RC1 **<br />* fix a long standing ath9k deadlock bug<br />* all feeds are now built<br />* image builder now works and RC2 contains all board specific images<br />* various board/stability fixes</p>
+<p>
+<strong> Highlights since Attitude Adjustment </strong>
+</p>
+
+<p>
+<strong>Default configuration and images</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Linux kernel updated to version 3.10</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Procd: new preinit, init, hotplug and event system written in C</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Native IPv6-support</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> RA &amp; DHCPv6+PD client and server</div>
+</li>
+<li class="level1"><div class="li"> Local prefix allocation &amp; source-restricted routes (multihoming)</div>
+</li>
+</ol>
+<ul>
+<li class="level1"><div class="li"> Filesystem improvements</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> Added support for sysupgrade on NAND-flash</div>
+</li>
+<li class="level1"><div class="li"> Added support for filesystem snapshot and rollback</div>
+</li>
+<li class="level1"><div class="li"> Rewritten mounting system in C for rootfs and block devices</div>
+</li>
+</ol>
+<ul>
+<li class="level1"><div class="li"> UCI configuration improvements</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> Support for testing configuration and rollback to working last working state</div>
+</li>
+<li class="level1"><div class="li"> Unified change trigger system to restart services on-demand</div>
+</li>
+<li class="level1"><div class="li"> Added a data validation layer</div>
+</li>
+</ol>
+<ul>
+<li class="level1"><div class="li"> Networking improvements</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> Netifd now handles setup and configuration reload of wireless interfaces</div>
+</li>
+<li class="level1"><div class="li"> Added reworked event support to allow obsoleting network hotplug-scripts</div>
+</li>
+<li class="level1"><div class="li"> Added support for dynamic firewall rules and zones</div>
+</li>
+<li class="level1"><div class="li"> Added support for transparent multicast to unicast translation for bridges</div>
+</li>
+<li class="level1"><div class="li"> Various other fixes and improvements</div>
+</li>
+</ol>
+
+<p>
+<strong>Additional highlights selectable in the package feeds or SDK</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Extended IPv6-support</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> Added DS-Lite support and improved 6to4, 6in4 and 6rd-support</div>
+</li>
+<li class="level1"><div class="li"> Experimental support for Lightweight 4over6, MAP-E and MAP-T</div>
+</li>
+<li class="level1"><div class="li"> Draft-support for self-managing home networks (HNCP)</div>
+</li>
+</ol>
+<ul>
+<li class="level1"><div class="li"> rpcd: new JSONRPC over HTTP-frontend for remote access to ubus</div>
+</li>
+<li class="level1"><div class="li"> mdns: new lightweight mdns daemon (work in progress)</div>
+</li>
+<li class="level1"><div class="li"> Initial support for the musl C standard library</div>
+</li>
+<li class="level1"><div class="li"> Support for QMI-based 3g/4g modems</div>
+</li>
+<li class="level1"><div class="li"> Support for DNSSEC validation</div>
+</li>
+<li class="level1"><div class="li"> Added architecture for package signing and SHA256 hashing</div>
+</li>
+<li class="level1"><div class="li"> … and many more cool things</div>
+</li>
+</ul>
+
+<p>
+<strong>Package feed reorganization</strong>
+</p>
+
+<p>
+For quite a while already we are not very satisfied with the quality
+of the packages-feed. To address this, we decided to do a fresh start
+on GitHub. The new feed <a href="https://github.com/openwrt/packages" class="urlextern" title="https://github.com/openwrt/packages"  rel="nofollow">https://github.com/openwrt/packages</a> should be
+used from now on and package maintainers are asked to move their
+packages there. For the final release we will still build the old
+packages feed but it will be necessary to enable it manually in the
+opkg package list to be usable. Additionally we would like to give a
+big thank you to all of our package maintainers working on our various
+feeds.
+</p>
+
+<p>
+<strong>New build servers</strong>
+</p>
+
+<p>
+We would like to express our gratitude to Imagination Technology for
+funding the 2 build servers that we used for the release.
+</p>
+
+<p>
+<strong>Whats next ?</strong>
+</p>
+
+<p>
+We aim at releasing Chaos Calmer (CC) before the end of the year. The
+CC release will use 3.14 or a newer LTS kernel as baseline.
+</p>
+
+<p>
+Have fun!
+ The OpenWrt developer team
+</p>
+
 
  <a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=242292#p242292'>Comments</a>
 </div>
