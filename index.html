@@ -61,11 +61,12 @@ colorize()
 <div class="box">
 <h3 class="box-title">Headlines</h3>
 <ul>
-<li><a href='#'>Chaos Calmer Release (soon)</a></li>
+<li><a href='#'>Chaos Calmer Release (coming soon)</a></li>
 <li><a href='http://wiki.openwrt.org/doc/barrier.breaker'>Barrier Breaker Release</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=272044#p272044'>BattleMesh 8</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=145689#p145689'>OpenWrt merchandise</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=144733#p144733'>SamKnows to measure European broadband with OpenWrt devices</a></li>
+<li><a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Previous Releases</a></li>
 <li><a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Earlier news...</a></li>
 </ul>
 </div>
@@ -85,11 +86,17 @@ colorize()
 <i>This page is a draft of a re-designed home page for the OpenWrt project. It attempts to preserve all the important and timely information, as well as reassuring people who are new to the project that OpenWrt would be a good choice for them. Please place any comments about this page on the Forum in the <a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Initiate to improve OpenWrt documentation</a> page. Thanks! -richbhanover </i>
 </div>
 
+
+- basic system requirements ????
+
+- a brief note how it is different from other custom firmwares (like DD-WRT) ????
+
+
 <div class='box'><h3 class='box-title'><p>What is OpenWrt?</p></h3>
 
 <h4>What is OpenWrt?</h4>
 <p>OpenWrt is a Linux distribution for embedded devices.
-It is an excellent replacement for the stock firmware for home routers, and for other kinds of equipment, too. 
+It is an excellent replacement for the stock firmware for home routers, and for other kinds of equipment, too. <a href="http://wiki.openwrt.org/about/history">OpenWrt got its start</a> in January 2004, when Linksys/Cisco released the source code for their WRT54G router (from which OpenWrt gets its name.)
 
 <h4>Why should I use OpenWrt?</h4> 
 <p>People frequently replace the stock firmware of their home router with OpenWrt. 
@@ -105,27 +112,27 @@ Don't worry, there are <a href="http://wiki.openwrt.org/doc/howto/installopenwrt
 </p>
 
 <h4>What's the next step?</h4>
+<p>
+  OpenWrt runs on hundreds of different routers and computers. Most equipment with a modern processor, 32 megabytes of RAM and 8 Mbytes of flash memory can run the current Barrier Breaker build. Earlier builds can run on lower-powered routers or equipment. 
+</p>
 <p>If you want to try OpenWrt on your home router, read the guide at <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">Installing OpenWrt on your Router</a>.
 </p>
-
-<h4>Can I use OpenWrt on other equipment?</h4>
-
-<p>Yes. The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devices</a> page lists many other platforms where OpenWrt runs. 
+<p> You can use OpenWrt on other kinds of equipment as well. The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devices</a> page lists many other platforms where OpenWrt runs. 
 </p>
 
 <h4>Why did you create OpenWrt?</h4>
 <p>As we said, we love to write software. Instead of trying to create a single, static firmware that simply clones the worst aspects of vendor's stock firmware, OpenWrt provides a fully writable filesystem with package management. 
 This frees you from the application selection and configuration provided by the vendor and allows you to customize the device through the use of packages to suit any application. For developer, OpenWrt is the framework to build an application without having to build a complete firmware around it; for users this means the ability for full customization, to use the device in ways never envisioned.</p>
 
-<h4>How can I get more information about OpenWrt?</h4>
+<h4>How can I learn more about OpenWrt?</h4>
 <p>The Documentation page at <a href="http://wiki.openwrt.org/doc/start">http://wiki.openwrt.org/doc/start</a> is a good place to start. You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to ask questions and read current information about the project.
 </p>
 </div>
 <!-- -->
 
 
-<div class='box'><h3 class='box-title'><p>OpenWrt BarrierBreaker 14.07 - September 2014</p></h3>
-<p>September 2014: The OpenWrt developers are proud to announce the final release
+<div class='box'><h3 class='box-title'><p>OpenWrt BarrierBreaker 14.07 - October 2014</p></h3>
+<p>October 2014: The OpenWrt developers are proud to announce the final release
 of OpenWrt Barrier Breaker.
 <pre class="code">   _______                     ________        __
   |       |.-----.-----.-----.|  |  |  |.----.|  |_
@@ -147,228 +154,70 @@ of OpenWrt Barrier Breaker.
 <a href="http://downloads.openwrt.org/barrier_breaker/14.07/" class="urlextern" title="http://downloads.openwrt.org/barrier_breaker/14.07/"  rel="nofollow">http://downloads.openwrt.org/barrier_breaker/14.07/</a>
 </p>
 
-<p>
-<strong>Important changes since RC3</strong>
-</p>
+ <h4>Highlights since the previous release (Attitude Adjustment, 12.09) </h4>
+ <p></p>
 <ul>
-<li class="level1"><div class="li"> various ath9k related fixes</div>
-</li>
-<li class="level1"><div class="li"> a few board related fixes</div>
-</li>
-<li class="level1"><div class="li"> fixes for packages depdending on curl</div>
-</li>
-<li class="level1"><div class="li"> per feed download folders</div>
-</li>
+ <li>Default configuration and images
+ <li>Linux kernel updated to version 3.10
+ <li>Procd: new preinit, init, hotplug and event system written in C
+ <li> Native IPv6-support
+  <ul>
+  <li> RA &amp; DHCPv6+PD client and server
+  <li> Local prefix allocation &amp; source-restricted routes<br />&nbsp; &nbsp;&nbsp; &nbsp;(multihoming)
+  </ul>
+<li>Extended IPv6-support
+  <ul>
+  <li> Added DS-Lite support and improved 6to4, 6in4 and 6rd-support
+  <li> Experimental support for Lightweight 4over6, MAP-E and MAP-T
+  <li> Draft-support for self-managing home networks (HNCP)
+  </ul>
+ <li> Filesystem improvements
+  <ul>
+  <li> Added support for sysupgrade on NAND-flash
+  <li> Added support for filesystem snapshot and rollback
+  <li> Rewritten mounting system in C for rootfs and block devices
+  </ul>
+ <li> UCI configuration improvements
+  <ul>
+  <li> Support for testing configuration and rollback to working &nbsp; &nbsp; <br />&nbsp; &nbsp;&nbsp; &nbsp;last working state
+  <li> Unified change trigger system to restart services on-demand
+  <li> Added a data validation layer
+  </ul>
+ <li> Networking improvements
+  <ul>
+  <li> Netifd now handles setup and configuration reload of<br />&nbsp; &nbsp;&nbsp; &nbsp;wireless interfaces
+  <li> Added reworked event support to allow obsoleting network<br />&nbsp; &nbsp;&nbsp; &nbsp;hotplug-scripts
+  <li> Added support for dynamic firewall rules and zones
+  <li> Added support for transparent multicast to unicast<br />&nbsp; &nbsp;&nbsp; &nbsp;translation for bridges
+  <li> Various other fixes and improvements
+  </ul>
+<li>Additional highlights selectable in the package feeds or SDK
+  
+<li> rpcd: new JSONRPC over HTTP-frontend for remote access to ubus
+<li> mdns: new lightweight mdns daemon (work in progress)
+<li> Initial support for the musl C standard library
+<li> Support for QMI-based 3g/4g modems
+<li> Support for DNSSEC validation
+<li> Added architecture for package signing and SHA256 hashing
+<li> ... and many more cool things
 </ul>
 
-<p>
-<strong>Important changes since RC2</strong>
+<h4>Package feed reorganization</h4>
+<p>For quite a while already we are not very satisfied with the quality<br />of the packages-feed. To address this, we decided to do a fresh start<br />on GitHub. The new feed <a href="https://github.com/openwrt/packages">https://github.com/openwrt/packages</a> should be<br />used from now on and package maintainers are asked to move their<br />packages there. For the final release we will still build the old<br />packages feed but it will be necessary to enable it manually in the<br />opkg package list to be usable.
 </p>
-<ul>
-<li class="level1"><div class="li"> NAT &amp; firewall throughput improvements</div>
-</li>
-<li class="level1"><div class="li"> Security updates for OpenSSL &amp; PolarSSL</div>
-</li>
-<li class="level1"><div class="li"> Minor fixes in DHCP &amp; DHCPv6 handling</div>
-</li>
-<li class="level1"><div class="li"> Configuration support for GRE tunnels</div>
-</li>
-<li class="level1"><div class="li"> Various other fixes</div>
-</li>
-</ul>
+<p>Additionally we would like to give a big thank you to all of our package<br />maintainers working on our various feeds.</p>
 
-<p>
-<strong>Important changes since RC1</strong>
-</p>
-<ul>
-<li class="level1"><div class="li"> fix a long standing ath9k deadlock bug</div>
-</li>
-<li class="level1"><div class="li"> all feeds are now built</div>
-</li>
-<li class="level1"><div class="li"> image builder now works and RC2 contains all board specific images</div>
-</li>
-<li class="level1"><div class="li"> various board/stability fixes</div>
-</li>
-</ul>
+<h4>New build servers</h4>
+<p>We would like to express our gratitude to Imagination Technology for<br />funding the 2 build servers that we used for the release.</p>
 
-<p>
-<strong> Highlights since Attitude Adjustment </strong>
-</p>
-
-<p>
-<strong>Default configuration and images</strong>
-</p>
-<ul>
-<li class="level1"><div class="li"> Linux kernel updated to version 3.10</div>
-</li>
-</ul>
-<ul>
-<li class="level1"><div class="li"> Procd: new preinit, init, hotplug and event system written in C</div>
-</li>
-</ul>
-<ul>
-<li class="level1"><div class="li"> Native IPv6-support</div>
-</li>
-</ul>
-<ol>
-<li class="level1"><div class="li"> RA &amp; DHCPv6+PD client and server</div>
-</li>
-<li class="level1"><div class="li"> Local prefix allocation &amp; source-restricted routes (multihoming)</div>
-</li>
-</ol>
-<ul>
-<li class="level1"><div class="li"> Filesystem improvements</div>
-</li>
-</ul>
-<ol>
-<li class="level1"><div class="li"> Added support for sysupgrade on NAND-flash</div>
-</li>
-<li class="level1"><div class="li"> Added support for filesystem snapshot and rollback</div>
-</li>
-<li class="level1"><div class="li"> Rewritten mounting system in C for rootfs and block devices</div>
-</li>
-</ol>
-<ul>
-<li class="level1"><div class="li"> UCI configuration improvements</div>
-</li>
-</ul>
-<ol>
-<li class="level1"><div class="li"> Support for testing configuration and rollback to working last working state</div>
-</li>
-<li class="level1"><div class="li"> Unified change trigger system to restart services on-demand</div>
-</li>
-<li class="level1"><div class="li"> Added a data validation layer</div>
-</li>
-</ol>
-<ul>
-<li class="level1"><div class="li"> Networking improvements</div>
-</li>
-</ul>
-<ol>
-<li class="level1"><div class="li"> Netifd now handles setup and configuration reload of wireless interfaces</div>
-</li>
-<li class="level1"><div class="li"> Added reworked event support to allow obsoleting network hotplug-scripts</div>
-</li>
-<li class="level1"><div class="li"> Added support for dynamic firewall rules and zones</div>
-</li>
-<li class="level1"><div class="li"> Added support for transparent multicast to unicast translation for bridges</div>
-</li>
-<li class="level1"><div class="li"> Various other fixes and improvements</div>
-</li>
-</ol>
-
-<p>
-<strong>Additional highlights selectable in the package feeds or SDK</strong>
-</p>
-<ul>
-<li class="level1"><div class="li"> Extended IPv6-support</div>
-</li>
-</ul>
-<ol>
-<li class="level1"><div class="li"> Added DS-Lite support and improved 6to4, 6in4 and 6rd-support</div>
-</li>
-<li class="level1"><div class="li"> Experimental support for Lightweight 4over6, MAP-E and MAP-T</div>
-</li>
-<li class="level1"><div class="li"> Draft-support for self-managing home networks (HNCP)</div>
-</li>
-</ol>
-<ul>
-<li class="level1"><div class="li"> rpcd: new JSONRPC over HTTP-frontend for remote access to ubus</div>
-</li>
-<li class="level1"><div class="li"> mdns: new lightweight mdns daemon (work in progress)</div>
-</li>
-<li class="level1"><div class="li"> Initial support for the musl C standard library</div>
-</li>
-<li class="level1"><div class="li"> Support for QMI-based 3g/4g modems</div>
-</li>
-<li class="level1"><div class="li"> Support for DNSSEC validation</div>
-</li>
-<li class="level1"><div class="li"> Added architecture for package signing and SHA256 hashing</div>
-</li>
-<li class="level1"><div class="li"> … and many more cool things</div>
-</li>
-</ul>
-
-<p>
-<strong>Package feed reorganization</strong>
-</p>
-
-<p>
-For quite a while already we are not very satisfied with the quality
-of the packages-feed. To address this, we decided to do a fresh start
-on GitHub. The new feed <a href="https://github.com/openwrt/packages" class="urlextern" title="https://github.com/openwrt/packages"  rel="nofollow">https://github.com/openwrt/packages</a> should be
-used from now on and package maintainers are asked to move their
-packages there. For the final release we will still build the old
-packages feed but it will be necessary to enable it manually in the
-opkg package list to be usable. Additionally we would like to give a
-big thank you to all of our package maintainers working on our various
-feeds.
-</p>
-
-<p>
-<strong>New build servers</strong>
-</p>
-
-<p>
-We would like to express our gratitude to Imagination Technology for
-funding the 2 build servers that we used for the release.
-</p>
-
-<p>
-<strong>Whats next ?</strong>
-</p>
-
-<p>
-We aim at releasing Chaos Calmer (CC) before the end of the year. The
-CC release will use 3.14 or a newer LTS kernel as baseline.
-</p>
-
-<p>
-Have fun!
- The OpenWrt developer team
-</p>
+<h4>Whats next ?</h4>
+We aim at releasing Chaos Calmer (CC) before the end of the year. The<br />CC release will use 3.14 or a newer LTS kernel as baseline.</p><br /><br /><p>Have fun!<br />&nbsp; &nbsp; The OpenWrt developer team</p>
+<h3>Changes leading up to the final build</h3>
+<p>** Important changes since RC3 **<br />* various ath9k related fixes<br />* a few board related fixes<br />* fixes for packages depdending on curl<br />* per feed download folders
+<li>* Important changes since RC2 **<br />* NAT &amp; firewall throughput improvements<br />* Security updates for OpenSSL &amp; PolarSSL<br />* Minor fixes in DHCP &amp; DHCPv6 handling<br />* Configuration support for GRE tunnels<br />* Various other fixes
+<li>* Important changes since RC1 **<br />* fix a long standing ath9k deadlock bug<br />* all feeds are now built<br />* image builder now works and RC2 contains all board specific images<br />* various board/stability fixes</p>
 
 
- <a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=242292#p242292'>Comments</a>
-</div>
-<!-- -->
-<div class='box'><h3 class='box-title'><p>Wireless Battle of the Mesh v7</p></h3>
-<p>The &quot;Wireless Battle of the Mesh&quot; is an event that aims to bring together people from across the globe to test the performance of different routing protocols for ad-hoc networks, like Babel, B.A.T.M.A.N., BMX, OLSR, and 802.11s.</p><p>Many developers and community networkers will join the event to hack, test, discuss, explain and learn.</p><p>If you are interested in dynamic routing protocols or wireless community networks you can&#039;t miss this event!</p><p>The battlemesh is free of charge and open for all, every year we strive to keep participation costs low by negotiating deals for accommodation and food.</p><p>This year the event will take place from Monday 12th to Sunday 18th of May 2014 in Leipzig, Germany at the Sublab, a very cool local hackerspace.</p><p>OpenWrt.org both support and endorses Battle of the Mesh and the multiple communities involved in the event.</p><p>Further information is found @ <a href="http://www.battlemesh.org/BattleMeshV7">www.battlemesh.org/BattleMeshV7</a></p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=225696#p225696'>Comments</a>
-</div>
-<!-- -->
-<div class='box'><h3 class='box-title'><p>Attitude Adjustment (12.09 final)</p></h3>
-<p>25th April 2013</p><p>The OpenWrt Release Team would like to announce the final Attitude Adjustment Release (12.09).<br /></p><div class="codebox"><pre><code>  _______                     ________        __
- |       |.-----.-----.-----.|  |  |  |.----.|  |_
- |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
- |_______||   __|_____|__|__||________||__|  |____|
-          |__| W I R E L E S S   F R E E D O M
- -----------------------------------------------------
- ATTITUDE ADJUSTMENT (12.09, r36088)
- -----------------------------------------------------
-  * 1/4 oz Vodka      Pour all ingredients into mixing
-  * 1/4 oz Gin        tin with ice, strain into glass.
-  * 1/4 oz Amaretto
-  * 1/4 oz Triple sec
-  * 1/4 oz Peach schnapps
-  * 1/4 oz Sour mix
-  * 1 splash Cranberry juice
- -----------------------------------------------------</code></pre></div><p>The OpenWrt 12.09 &quot;attitude_adjustment&quot; source code can be checked out at:<br />&nbsp; svn://svn.openwrt.org/openwrt/tags/attitude_adjustment_12.09/</p><p>Further information on how to checkout the release source code is found at:<br />&nbsp; <a href="https://dev.openwrt.org/wiki/GetSource">https://dev.openwrt.org/wiki/GetSource</a></p><p>Highlights since Backfire 10.03.1:</p><ul><li><p>Dropped support for legacy Broadcom target (brcm-2.4)</p></li><li><p>Switched to Kernel 3.3</p></li><li><p>Switched to uClibc 0.9.33.2</p></li><li><p>Switched x86 images from ext2 to ext4 filesystem</p></li><li><p>Improved parallel building support</p></li><li><p>New netifd implementation to replace the old script based network configuration system</p></li><li><p>Switched to shadow passwords</p></li><li><p>Support for external overlay filesystems in release images</p></li><li><p>Various firewall enhancements</p></li><li><p>Wireless driver updates and stability improvements</p></li><li><p>Experimential support for 5 and 10 MHz channels in ath5k and ath9k</p></li><li><p>Package updates and dependency fixes</p></li><li><p>New target support: ramips, bcm2708 (Raspberry Pi) and others</p></li><li><p>Support for further router models</p></li><li><p>Support for building with eglic instead of uClibc</p></li><li><p>Support for 6RD configuration</p></li><li><p>Support for bridge firewalling in release images</p></li></ul><p>Known Issues:<br /></p><ul><li><p>Most open tickets at the time of the final builds</p></li><li><p>Lower end devices with only 16 MiB RAM will easily run out of Memory, for bcm47xx based devices is Backfire with brcm-2.4 recommended</p></li></ul><p>More detailed information available at:<br />&nbsp; <a href="https://dev.openwrt.org/query?status=closed&amp;group=resolution&amp;milestone=Attitude+Adjustment+12.09">https://dev.openwrt.org/query?status=cl â€¦ ment+12.09</a></p><p>Detailed core changelog at: <a href="https://dev.openwrt.org/log/branches/attitude_adjustment">https://dev.openwrt.org/log/branches/attitude_adjustment</a><br />Detailed packages changelog at: <a href="https://dev.openwrt.org/log/branches/packages_12.09">https://dev.openwrt.org/log/branches/packages_12.09</a><br />Binaries can be downloaded at <a href="http://downloads.openwrt.org/attitude_adjustment/12.09/">http://downloads.openwrt.org/attitude_adjustment/12.09/</a></p><p>Yours truly,<br />The OpenWrt developer team</p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=199599#p199599'>Comments</a>
-</div>
-<!-- -->
-<div class='box'><h3 class='box-title'><p>Wireless Battle of the Mesh v8</p></h3>
-<p>The &quot;Wireless Battle of the Mesh&quot; is an event that aims to bring together people from across the globe to test the performance of different routing protocols for ad-hoc networks, like Babel, B.A.T.M.A.N., BMX, OLSR, and 802.11s.</p><p>Many developers and community networkers will join the event to hack, test, discuss, explain and learn.</p><p>If you are interested in dynamic routing protocols or wireless community networks you can&#039;t miss this event!</p><p>The event is free of charge and open for all, every year we strive to keep participation costs low by negotiating deals for accommodation and food.</p><p>This years edition will take place from Monday 3rd to Sunday 9th of August 2015 in Maribor, Slovenia at Dom Obrambe Pekre, the HQ of the Slovenian HAM-Radio Association.</p><p>OpenWrt.org both support and endorses Battle of the Mesh and the multiple communities involved in the event.</p><p>Further information is found @ <a href="http://battlemesh.org/BattleMeshV8">http://battlemesh.org/BattleMeshV8</a></p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=272044#p272044'>Comments</a>
-</div>
-<!-- -->
-<div class='box'><h3 class='box-title'><p>BattleMeshV5</p></h3>
-<p>The BattleMesh organizers have announced the &#039;Battle of the Mesh version 5&#039;, which will be held in Athens, Greece. BattleMesh is a technical tournament with an overwhelming social character. If you are a mesh networking enthusiast, community networking activist, or have an interest in mesh networks you might find this gathering highly interesting. This event is an opportunity to meet developers from the most popular open source mesh protocol implementations, such as B.A.T.M.A.N, OLSR, Babel, BMX and L3 and L2.</p><p>The BattleMeshV5 will be held in Athens, Greece from the 26th of March until 1th of April. The testing / hacking / talks will take place in the National Technical University of Athens (NTUA). A large room that can accommodate 100 persons has been reserved for the BattleMesh participants. To this comes space for workshops, hacking sessions and a long list of social activities.</p><p>There is further organized a BattleMeshV5 Warmup which will be held during the weekend of 23rd - 25th of March in the mountain village of Sarantaporo. Sarantaporo is a small mountain village, situated at an altitude of 840m, opposite Olympus mountain, in the prefecture of Larisa, not far from Athens. Itâ€™s permanent population is about 900 inhabitants and their main activities are agriculture, farming and surfing the web!</p><p>Further information can be found on the BattleMeshV5 website: <a href="http://battlemesh.org/BattleMeshV5">http://battlemesh.org/BattleMeshV5</a></p><p>The OpenWrt developers</p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=156017#p156017'>Comments</a>
-</div><div class='box'><h3 class='box-title'><p>Backfire 10.03.1 final</p></h3>
-<p>21 December 2011</p><p>The OpenWrt Release Team would like to announce the final<br />Backfire Interim Release 1 (10.03.1).</p><p>Binaries can be downloaded at <a href="http://downloads.openwrt.org/backfire/10.03.1/">http://downloads.openwrt.org/backfire/10.03.1/</a></p><p>Highlights since Backfire 10.03.1 RC6:</p><p>&nbsp; * Added support for the TP-Link TL-MR3420<br />&nbsp; * Added support for the Netgear WNDR3800<br />&nbsp; * Added support for the D-Link DSL-2650U<br />&nbsp; * Another round of mac80211 improvements and stability fixes<br />&nbsp; * Changed wireless interface numbering schema to support restarts of single radios<br />&nbsp; * Fixed ethernet on newer Compex WP543 Boards<br />&nbsp; * Fixed race condition in link state handling of ag71xx ethernet driver<br />&nbsp; * Fixed cpmac ethernet regressions on various AR7 boards<br />&nbsp; * Fixed various busybox issues<br />&nbsp; * Fixed dropbear segmentation fault when using remote port forwardings<br />&nbsp; * Fixed the second ethernet port on Ubiquiti NanoStation M devices<br />&nbsp; * Prevent accidental bridging of station mode interfaces<br />&nbsp; * Indefinitely try to resolve NTP server addresses, improves reliability of time sync</p><p>Known Issues:</p><p>&nbsp; * Most open tickets at the time of the final builds<br />&nbsp; * Various 5GHz channels may be locked due to lacking DFS support and other regulatory requirements</p><p>More detailed information available at:</p><p>&nbsp; <a href="https://dev.openwrt.org/milestone/Backfire%2010.03.1">https://dev.openwrt.org/milestone/Backfire%2010.03.1</a></p><p>Detailed core changelog at: <a href="https://dev.openwrt.org/log/branches/backfire?revs=28695-29592">https://dev.openwrt.org/log/branches/backfire?revs=28695-29592</a><br />Detailed packages changelog at: <a href="https://dev.openwrt.org/log/branches/packages_10.03.1?revs=28695-29592">https://dev.openwrt.org/log/branches/packages_10.03.1?revs=28695-29592</a></p><br /><p>Yours truly,<br />The OpenWrt developer team</p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=151723#p151723'>Comments</a>
-</div><div class='box'><h3 class='box-title'><p>Backfire 10.03.1-rc6</p></h3>
-<p>1 November 2011</p><p>The OpenWrt Release Team would like to announce a sixth release candidate (RC6) for Backfire Interim Release 1 (10.03.1).&nbsp; Testing of this release candidate will allow further refinement of 10.03.1</p><p>Binaries can be downloaded at <a href="http://downloads.openwrt.org/backfire/10.03.1-rc6/">http://downloads.openwrt.org/backfire/10.03.1-rc6/</a></p><p>Highlights since Backfire 10.03.1 RC5:
-<li> Further throughput and interoperability improvements in ath9k and mac80211<br />* Added support for the TL-WR740N<br />* Merged WZR-HP-G300NH and -G301NH images<br />* Fixed default network configuration for ASUS WL-330gE<br />* Fixed WRT160NL support for revisions with certain flash chips using a bigger block size<br />* DMA fixes in ag71xx ethernet driver<br />* Fix multicast traffic handling on RDC platform<br />* Fix ARM SDK building<br />* Improve ImageBuilder index generation, strip uneeded opkg work data<br />* Fix 6in4 endpoint update with changed HE.net api<br />* Fix mtu_fix rule generation, use mangle instead of filter table<br />* Switch from rdate to ntpd for more reliable time synchronization<br />* Various network configuration and base-files fixes<br />* Various fixes in uhttpd web server<br />* Support pptp configuration with symbolic server names<br />* Support disabling single wireless networks<br />* Rework MAC address generation for wireless VAPs<br />* Support binding dropbear to a specific network<br />* Introduce AC and Service name options for PPPoE, work around&nbsp; &nbsp;argument order issues<br />* Fix block-extroot on brcm-2.4<br />* Allow configuration of lifetime parameters for 6to4<br />* Allow negations, multiple values and other advanced configurations&nbsp; &nbsp;in firewall package<br />* Tune ICMPv6 default rules<br />* Add UCI configuration and LuCI module for wondershaper<br />* Deprecate iptables-utils<br />* Fix openl2tp build for distributions without current rpcgen<br />* Fix freeswitch for Backfire</p><p>Dropped platforms:
-<li> Cobalt - not in release shape<br />* Octeon - not in release shape</p><p>Known Issues:
-<li> Most open tickets at the time of the RC6 builds<br />* Various 5GHz channels may be locked due to lacking DFS support and other regulatory requirements</p><p>More detailed information available at:</p><p>&nbsp; <a href="https://dev.openwrt.org/milestone/Backfire%2010.03.1">https://dev.openwrt.org/milestone/Backfire%2010.03.1</a></p><p>Detailed core changelog at: <a href="https://dev.openwrt.org/log/branches/backfire?revs=27609-28694">https://dev.openwrt.org/log/branches/backfire?revs=27609-28694</a><br />Detailed packages changelog at: <a href="https://dev.openwrt.org/log/branches/packages_10.03.1?revs=27609-28694">https://dev.openwrt.org/log/branches/packages_10.03.1?revs=27609-28694</a></p><br /><p>Yours truly,<br />The OpenWrt developer team</p><a class='comments' href='https://forum.openwrt.org/viewtopic.php?pid=147213#p147213'>Comments</a>
-</div></div>
 <script type="text/javascript">
 <!--
 swatch()
