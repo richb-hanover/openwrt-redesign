@@ -1,0 +1,27 @@
+/* MSIE PNG HACKS */
+
+body {
+  height: 100%;
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/.styles/img/bg.png);
+}
+
+.footer {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/.styles/img/footer.png);
+}
+
+#banner {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/.styles/img/openwrt-logo.png);
+}
+
+.box {
+  height: 1em;
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=/.styles/img/bg-2.png, sizingMethod='scale');
+}
+
+.box * {
+  position: relative;
+}

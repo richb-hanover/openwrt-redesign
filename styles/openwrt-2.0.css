@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #557788 url(img/bg.png) no-repeat scroll;
+  font-family: sans-serif;
+  color: #000;
+  font-size: 80%;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
+}
+
+.spacer {
+  height: 160px;
+}
+
+.footer {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  height: 261px;
+  width: 100%;
+  background: url(img/footer.png);
+}
+
+#banner {
+  font-size: 0;
+  display: block;
+  width: 386px;
+  height: 98px;
+  background: url(img/openwrt-logo.png);
+}
+
+#banner h1 {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+#navigation {
+  font-size: 1.3em;
+}
+
+#navigation li {
+  display: inline;
+  padding: 1em;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: #FFF;
+  background: inherit;
+}
+
+.box {
+  margin: 0.5em;
+  padding: 5px;
+  border: 3px solid #000;
+  font-weight: normal;
+  background: url(img/bg-2.png);
+}
+
+.swatch {
+  display: block;
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin: 0.5em;
+  border: 3px solid #000;
+  cursor: pointer;
+}
+
+.box-title {
+  display: list-item;
+  list-style-type: none;
+  list-style-image: url(img/spacer.png);
+  list-style-position: inside;
+  margin: -5px -5px 5px -5px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.pad-right {
+  margin-right: 18em;
+}
+
+.sidebar {
+  float: right;
+  width: 18em;
+  position: relative;
+  z-index: 1;
+}
+
+.box-title, #navigation {
+  background: #000;
+  color: #fff;
+  padding: 2pt;
+}
+
+.comments { 
+  display: block;
+  text-align: right;
+  border-top: 1px solid black;
+  margin-top: 1em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.box ul {
+  margin-left: 2em;
+  list-style-type: circle;
+}
+
+.box ul li {
+  margin-bottom: 0.5em;
+}
+
+form * {
+  padding: 1px;
+}
+
+a { 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.centered {
+  margin-top: 4em;
+  width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.centered .box-title {
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 10px;
+}
+
+.dir table {
+width: inherit;
+}
+
+.mono {
+	font-family: monospace;
+}
+
+fieldset {
+  border: 0;
+}
+
+#colorize {
+border-style: dashed;
+}
+
+blockquote { border: 1px solid #777777; margin: 0.5em; padding: 0.5em; }
+.box p { padding: 0.5em; }
+
+.hosted_at {
+  display: block;
+  float: right;
+  border: 2px solid #000;
+  margin-top: 30px;
+  margin-right: 60px;
+}
