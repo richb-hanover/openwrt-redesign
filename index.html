@@ -1,14 +1,14 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <title>OpenWrt</title>
-<link rel="stylesheet" type="text/css" href="http://openwrt.org/.styles/openwrt-2.0.css" />
+<link rel="stylesheet" type="text/css" href="styles/openwrt-2.0.css" />
 <!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="http://openwrt.org/.styles/openwrt-2.0-msie.css" />
+<link rel="stylesheet" type="text/css" href="styles/openwrt-2.0-msie.css" />
 <![endif]-->
 <link rel="alternate" title="OpenWrt News" href="https://forum.openwrt.org/rss.php?cid=6" type="application/rss+xml" />
-<script type="text/javascript" src="/.styles/openwrt-2.0.js"></script>
+<script type="text/javascript" src="/styles/openwrt-2.0.js"></script>
 </head>
 <body>
 <script>
@@ -49,28 +49,26 @@ colorize()
 </ul>
 </div>
 <div class="box">
-<!-- Facebook Connect -->
-<script async src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-<fb:like-box href="https://www.facebook.com/OpenWrt" show_faces="false" stream="false" header="false"></fb:like-box>
-<!-- Facebook Connect -->
-</div>
-<div class="box" align="center">
-<a href="https://flattr.com/thing/642631/OpenWrt" target="_blank">
-<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-</div>
-<div class="box">
 <h3 class="box-title">Headlines</h3>
 <ul>
-<li><a href='#'>Chaos Calmer Release (coming soon)</a></li>
-<li><a href='http://wiki.openwrt.org/doc/barrier.breaker'>Barrier Breaker Release</a></li>
+<li><a href='#cc-rc1'>Chaos Calmer Release RC1</a></li>
+<li><a href='#bb-final'>Barrier Breaker Release</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=272044#p272044'>BattleMesh 8</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=145689#p145689'>OpenWrt merchandise</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=144733#p144733'>SamKnows to measure European broadband with OpenWrt devices</a></li>
-<li><a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Previous Releases</a></li>
-<li><a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Earlier news...</a></li>
+<li><a href="#earlier">Earlier OpenWrt Releases</a></li>
 </ul>
 </div>
 <div>
+<div class="box"> <!-- Facebook Connect -->
+<script async src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<fb:like-box href="https://www.facebook.com/OpenWrt" show_faces="false" stream="false" header="false"></fb:like-box>
+</div>
+<div class="box" align="center"> <!-- Flatter -->
+<a href="https://flattr.com/thing/642631/OpenWrt" target="_blank">
+<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+</div>
+<!-- color swatchers -->
 <div class="swatch" style="background: #557788"></div>
 <div class="swatch" style="background: #114488"></div>
 <div class="swatch" style="background: #192a65"></div>
@@ -93,10 +91,15 @@ Thanks! -richbhanover </i>
 
 <h4>What is OpenWrt? </h4>
 <p>OpenWrt is a Linux distribution for embedded devices and routers.
-People use OpenWrt because it has the best combination of <a href="http://wiki.openwrt.org/toh/start">supported router types</a>, the ability to run on <a href="https://dev.openwrt.org/wiki/platforms">embedded systems,</a> <a href="http://wiki.openwrt.org/doc/barrier.breaker">up-to-date software</a> (both kernel and packages), and the <a href="http://forums.openwrt.org/">OpenWrt Forums</a> provide a vibrant community of people who're using, developing, and finding solutions for OpenWrt.  
+People use OpenWrt because it has the best combination of <a href="http://wiki.openwrt.org/toh/start">supported router types</a>, 
+the ability to run on <a href="https://dev.openwrt.org/wiki/platforms">embedded systems,</a> 
+<a href="http://wiki.openwrt.org/doc/barrier.breaker">up-to-date software</a> (both kernel and packages), 
+and a vibrant community in the  <a href="http://forums.openwrt.org/">OpenWrt Forums</a> with
+people who're using, developing, and finding solutions for OpenWrt.  
 </p>
 <h4>Why should I use OpenWrt?</h4>
-<p>Router manufacturers suffer from incredibly low profit margins, so frequently they skimp on the development and testing of their stock firmware. 
+<p>Router manufacturers work with incredibly low profit margins. 
+This can cause them to skimp on the development and testing of their stock firmware. 
 Without naming names, most vendor firmware is buggy, insecure, and not well maintained. 
 </p>
 <p>On the other hand, we love to write software, and take pride in making <i>really good</i> software. 
@@ -104,35 +107,38 @@ People who use OpenWrt get tremendous benefits in stability of their network con
 rarely have to reboot their router, 
 have excellent security, 
 and often get higher speeds with low latency. 
-Their router just works better. </p>
+The router just works better with OpenWrt. </p>
 
 <h4>Is it easy to use?</h4>
 <p> Yes. After you flash the OpenWrt firmware, you can use a web-based GUI to configure your router. 
-Don't worry, there are <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">good guides</a> that list the steps for popular routers. Once it's installed and running, most people can simply forget that it's there.
+Don't worry, there are <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">good guides</a> 
+that list the steps for popular routers. 
+Once it's installed and running, most people can simply forget that it's there.
 </p>
 
 <h4>What's the next step?</h4>
 <p>
   OpenWrt runs on hundreds of different routers and computers. 
   Most equipment (and most current routers you can purchase today) with a modern processor, 32 megabytes of RAM and 8 Mbytes of flash memory can run the current Barrier Breaker build. 
-  Earlier OpenWrt builds can run on lower-powered routers or equipment.  
+  <a href="#earlier">Earlier OpenWrt builds</a> can run on older or lower-powered routers or equipment.  
 </p>
-<p>If you want to try OpenWrt on your home router, read the guide at <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">Installing OpenWrt on your Router</a>.
+<p>If you want to try OpenWrt on your home router, read the guide <a href="http://wiki.openwrt.org/doc/howto/installopenwrt">Installing OpenWrt on your Router</a>.
 </p>
-<p> You can use OpenWrt on other kinds of equipment as well. The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devices</a> page lists many other platforms where OpenWrt runs. 
+<p> You can use OpenWrt on other kinds of equipment as well. 
+The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devices</a> page lists many other platforms where OpenWrt runs. 
 </p>
 
 <h4>Why did you create OpenWrt? </h4>
 <p>As we said, we love to write software. 
 <a href="http://wiki.openwrt.org/about/history">We got started</a> in January 2004, when Linksys/Cisco released the source code for their WRT54G router (from which OpenWrt gets its name). 
 We were excited by the opportunity to replace the Linksys software with a more fully-functioning feature set "right out of the box." </p>
-<p>Today, you can starting using OpenWrt without a lot of fuss or options. 
+<p>Today, you can start using OpenWrt without a lot of fuss or options. 
 But it provides thousands of optional packages to add additional capabilities that aren't available with lot of stock firmware. </p>
 <p>
 Furthermore, OpenWrt is built for dozens of different kinds of processors and architectures. 
 This cross-platform capability means that you can migrate to different hardware if you need additional performance. 
-And if you need to develop a specialized set of features for a project, OpenWrt's build environment allows you to create custom builds for any of the supported architectures and combinations of packages. 
-See the <a href="https://dev.openwrt.org/">Development Wiki</a> for details.
+And if you need to combine a specialized set of features for a project, OpenWrt's development environment allows you to create custom builds for any of the supported architectures and combinations of packages. 
+See the <a href="http://wiki.openwrt.org/doc">wiki</a> for details.
 </p>
 
 <h4>How can I learn more about OpenWrt?</h4>
@@ -142,8 +148,76 @@ You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to as
 </div>
 <!-- -->
 
+<div class='box'><a name="cc-rc1"></a><h3 class='box-title'><p>Chaos Calmer 15.05-rc1 - 20 May 2015</p></h3>
+<p>20 May 2015: The OpenWrt developers are proud to announce the first release candidate of OpenWrt Chaos Calmer.</p><div class="codebox"><pre><code>   _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ CHAOS CALMER (15.05 RC1)
+ -----------------------------------------------------
+  * 1 1/2 oz Gin            Shake with a glassful
+  * 1/4 oz Triple Sec       of broken ice and pour
+  * 3/4 oz Lime Juice       unstrained into a goblet.
+  * 1 1/2 oz Orange Juice
+  * 1 tsp. Grenadine Syrup
+ -----------------------------------------------------</code></pre></div><p> -----------------------------------------------------<br /></p>
 
-<div class='box'><h3 class='box-title'><p>OpenWrt BarrierBreaker 14.07 - October 2014</p></h3>
+<p>
+  Chaos Calmer (CC) is the name of the newest release of OpenWrt. 
+  It provides a modern Linux kernel with the latest set of tools and packages to provide a stable, powerful, robust platform for software. 
+  It is useful for routers (home and commercial) as well as embedded systems. 
+  This announcement is for the first "release candidate" (rc1) - the final CC release is expected be available in mid-2015.
+</p>
+<p>
+  The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/chaos_calmer/15.05-rc1/" rel="nofollow">http://downloads.openwrt.org/chaos_calmer/15.05-rc1/</a> Most of the detail pages for well-supported routers also have links to the proper image.
+</p>
+<h4>Highlights since the previous (Barrier Breaker, 14.07) release </h4>
+<ul>
+<li><b>Linux kernel updated to version 3.18</b>
+<li><b>Improved Security Features</b>
+   <ul>
+   <li> Rewritten package signing architecture based on ed25519
+   <li> Added support for jails 
+   <li> Added support for hardened builds 
+   </ul>
+<li><b>Improved Networking Support</b>
+   <ul>
+   <li> Added or improved support for lots of 3G/4G modems (MBIM, QMI, NCM, ...)
+   <li> Added support for 464XLAT (CLAT)
+   <li> Improved support for self-managing networks (draft-ietf-homenet-hncp)
+   <li> Netfilter performance enhancements (conntrack route cache)
+   <li> Better multi-core support for the network stack
+   <li> Improved support for MAP-E and MAP-T IPv4 transitioning technologies
+   <li> Improved network auto-setup capable of detecting and bootstrapping IPv4-only, 6rd, Dual-Stack, IPv6-only, DS-Lite, LW4over6, MAP-E, MAP-T, 464XLAT and combinations without explicit configuration
+   <li> Added support for Smart Queue Management (SQM) QoS, AQM and Traffic Shaping
+   <li> Improved support for DNSSEC
+   </ul>
+<li><b>Platform and Driver Support</b>
+   <ul>
+   <li> Added support for feeds of externally maintained targets
+   <li> New mt7621 subtarget for Mediatek 11ac SoC
+   <li> New mt76 mac80211 based wifi driver for MTK 11ac cores.
+   <li> New mwlwifi mac80211 based wifi driver for the Marvell 88W8864
+   <li> New bcm53xx target for Broadcom ARM BCM47xx/53xx devices
+   <li> brcm2708: support for Raspberry Pi 2
+   <li> brcm63xx: support for BCM6318 and BCM63268 family
+   <li> brcm63xx: improved fallback sprom support with bcma support
+   </ul>
+<li><b>Known Issues</b>
+   <ul>
+   <li> libusb-1.0 is currently not installable (#19668). This is already fixed in svn. This can be manually fixed by applying the changes from r45702 by hand.
+   <li> the targets feed is part of opkg.conf, and will produce warnings. It is save to remove from /etc/opkg.conf.
+   </ul>
+<li><b>And lots and lots of other advancements...</b>
+</ul>
+<p>As always a big thank you goes to all our active package maintainers, testers, supporters and documenters. Have fun!<br />&nbsp; &nbsp; The OpenWrt developer team</p>
+   </ul>
+</div>
+
+<!-- -->
+<div class='box'><a name="bb-final"></a><h3 class='box-title'><p>OpenWrt BarrierBreaker 14.07 - October 2014</p></h3>
 <p>October 2014: The OpenWrt developers are proud to announce the final release
 of OpenWrt Barrier Breaker.
 <pre class="code">   _______                     ________        __
@@ -163,10 +237,10 @@ of OpenWrt Barrier Breaker.
 </p>
 
 <p>
-<a href="http://downloads.openwrt.org/barrier_breaker/14.07/" class="urlextern" title="http://downloads.openwrt.org/barrier_breaker/14.07/"  rel="nofollow">http://downloads.openwrt.org/barrier_breaker/14.07/</a>
+  The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/barrier_breaker/14.07/" class="urlextern" title="http://downloads.openwrt.org/barrier_breaker/14.07/" rel="nofollow">http://downloads.openwrt.org/barrier_breaker/14.07/</a> Most of the detail pages for well-supported routers also have links to the proper image.
 </p>
 
- <h4>Highlights since the previous release (Attitude Adjustment, 12.09) </h4>
+<h4>Highlights since the previous (Attitude Adjustment, 12.09) release </h4>
  <p></p>
 <ul>
  <li>Default configuration and images
@@ -223,12 +297,29 @@ of OpenWrt Barrier Breaker.
 <p>We would like to express our gratitude to Imagination Technology for<br />funding the 2 build servers that we used for the release.</p>
 
 <h4>Whats next ?</h4>
-We aim at releasing Chaos Calmer (CC) before the end of the year. The<br />CC release will use 3.14 or a newer LTS kernel as baseline.</p><br /><br /><p>Have fun!<br />&nbsp; &nbsp; The OpenWrt developer team</p>
-<h3>Changes leading up to the final build</h3>
+We aim at releasing Chaos Calmer (CC) before the end of the year. The<br />CC release will use 3.14 or a newer LTS kernel as baseline.</p>
+<p>Have fun!<br />&nbsp; &nbsp; The OpenWrt developer team</p>
+
+<h3>Changes leading up to the Barrier Breaker final build</h3>
 <p>** Important changes since RC3 **<br />* various ath9k related fixes<br />* a few board related fixes<br />* fixes for packages depdending on curl<br />* per feed download folders
 <li>* Important changes since RC2 **<br />* NAT &amp; firewall throughput improvements<br />* Security updates for OpenSSL &amp; PolarSSL<br />* Minor fixes in DHCP &amp; DHCPv6 handling<br />* Configuration support for GRE tunnels<br />* Various other fixes
 <li>* Important changes since RC1 **<br />* fix a long standing ath9k deadlock bug<br />* all feeds are now built<br />* image builder now works and RC2 contains all board specific images<br />* various board/stability fixes</p>
 
+</div>
+
+<div class='box'><a name="earlier"></a><h3 class='box-title'><p>Earlier OpenWrt Releases...</p></h3>
+<p>OpenWrt has a long of robust versions. Here are links to the announcements for these releases...
+
+<ul>
+<li> <a href="https://forum.openwrt.org/viewtopic.php?id=51940">Barrier Breaker 14.07 (BB) - 31 July 2014</a>
+<li> <a href="https://forum.openwrt.org/viewtopic.php?id=43764">Attitude Adjustment 12.09 (AA) - 25 April 2013</a>
+<li> <a href="https://forum.openwrt.org/viewtopic.php?id=33624">Backfire 10.03.1 - 21 December 2011</a>
+<li> <a href="https://forum.openwrt.org/viewtopic.php?id=23132">Kamikaze 8.09.2 - 10 Jan 2010</a>
+<li> <a href="https://forum.openwrt.org/viewtopic.php?id=12780">Kamikaze 7.09 - 30 Sep 2007</a>
+<li> <a href="https://forum.openwrt.org/viewtopic.php?id=8045" >WhiteRussion rc6 - 7 Nov 2006</a>
+</ul>
+
+</p></div>
 
 <script type="text/javascript">
 <!--
