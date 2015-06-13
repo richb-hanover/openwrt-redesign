@@ -81,9 +81,10 @@ colorize()
 
 <div class='box'><h3 class='box-title'><p>About this redesigned home page...</p></h3>
 <h4>About this page...</h4>
-<i>This page is has draft text for the OpenWrt project home page. 
+<i>This page has draft text for the OpenWrt project home page. 
 It preserves all the important and timely information, as well as giving newcomers the assurance that OpenWrt would be a good choice for them. 
 Please place any comments about this page on the Forum in the <a href="https://forum.openwrt.org/viewtopic.php?pid=276600#p276600">Initiative to improve OpenWrt documentation</a> page. 
+Source for this page is at <a href="https://github.com/richb-hanover/openwrt-redesign">https://github.com/richb-hanover/openwrt-redesign</a> 
 Thanks! -richbhanover </i>
 </div>
 
@@ -148,14 +149,14 @@ You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to as
 </div>
 <!-- -->
 
-<div class='box' id="cc-rc1"><h3 class='box-title'><p>Chaos Calmer 15.05-rc1 - 20 May 2015</p></h3>
-<p>20 May 2015: The OpenWrt developers are proud to announce the first release candidate of OpenWrt Chaos Calmer.</p><div class="codebox"><pre><code>   _______                     ________        __
+<div class='box' id="cc-rc2"><h3 class='box-title'><p>Chaos Calmer 15.05-rc2 - 13 June 2015</p></h3>
+<p>13 June 2015: The OpenWrt developers are proud to announce the second release candidate of OpenWrt Chaos Calmer.</p><div class="codebox"><pre><code>   _______                     ________        __
  |       |.-----.-----.-----.|  |  |  |.----.|  |_
  |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
  |_______||   __|_____|__|__||________||__|  |____|
           |__| W I R E L E S S   F R E E D O M
  -----------------------------------------------------
- CHAOS CALMER (15.05 RC1)
+ CHAOS CALMER (15.05 RC2)
  -----------------------------------------------------
   * 1 1/2 oz Gin            Shake with a glassful
   * 1/4 oz Triple Sec       of broken ice and pour
@@ -168,10 +169,10 @@ You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to as
   Chaos Calmer (CC) is the name of the newest release of OpenWrt. 
   It provides a modern Linux kernel with the latest set of tools and packages to provide a stable, powerful, robust platform for software. 
   It is useful for routers (home and commercial) as well as embedded systems. 
-  This announcement is for the first "release candidate" (rc1) - the final CC release is expected be available in mid-2015.
+  This announcement is for the second "release candidate" (rc2) - the final CC release is expected be available in mid-2015.
 </p>
 <p>
-  The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/chaos_calmer/15.05-rc1/" rel="nofollow">http://downloads.openwrt.org/chaos_calmer/15.05-rc1/</a> Most of the detail pages for well-supported routers also have links to the proper image.
+  The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/chaos_calmer/15.05-rc2/" rel="nofollow">http://downloads.openwrt.org/chaos_calmer/15.05-rc2/</a> Most of the detail pages linked from the <a href="http://wiki.openwrt.org/toh/start">Table of Hardware</a> for well-supported routers also have links to the proper image.
 </p>
 <h4>Highlights since the previous (Barrier Breaker, 14.07) release </h4>
 <ul>
@@ -185,12 +186,13 @@ You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to as
 <li><b>Improved Networking Support</b>
    <ul>
    <li> Added or improved support for lots of 3G/4G modems (MBIM, QMI, NCM, ...)
-   <li> Added support for 464XLAT (CLAT)
-   <li> Improved support for self-managing networks (draft-ietf-homenet-hncp)
+   <li> Added support for 464XLAT (CLAT) [RFC 6877 + RFC 7050]
+   <li> Improved support for self-managing networks [draft-ietf-homenet-hncp]
    <li> Netfilter performance enhancements (conntrack route cache)
    <li> Better multi-core support for the network stack
-   <li> Improved support for MAP-E and MAP-T IPv4 transitioning technologies
-   <li> Improved network auto-setup capable of detecting and bootstrapping IPv4-only, 6rd, Dual-Stack, IPv6-only, DS-Lite, LW4over6, MAP-E, MAP-T, 464XLAT and combinations without explicit configuration
+   <li> Improved support for MAP-E, MAP-T and LW4over6 IPv4 transitioning technologies
+        [draft-ietf-softwire-map, -map-t, -map-dhcp, -lw4over6]
+   <li> Improved network auto-setup capable of detecting and bootstrapping IPv4-only, 6rd, Dual-Stack, IPv6-only, DS-Lite, LW4over6, MAP-E, MAP-T, 464XLAT and combinations without explicit configuration [based on RFC 7084]
    <li> Added support for Smart Queue Management (SQM) QoS, AQM and Traffic Shaping
    <li> Improved support for DNSSEC
    </ul>
@@ -201,15 +203,32 @@ You can also read the <a href="http://forum.openwrt.org">OpenWrt Forum</a> to as
    <li> New mt76 mac80211 based wifi driver for MTK 11ac cores.
    <li> New mwlwifi mac80211 based wifi driver for the Marvell 88W8864
    <li> New bcm53xx target for Broadcom ARM BCM47xx/53xx devices
+   <li> New mxs target for Freescale i.MX23/28 family and various boards
+   <li> New sunxi target for AllWinner A10/A13/A20 family and various boards
    <li> brcm2708: support for Raspberry Pi 2
    <li> brcm63xx: support for BCM6318 and BCM63268 family
    <li> brcm63xx: improved fallback sprom support with bcma support
    </ul>
 <li><b>And lots and lots of other advancements...</b>
-<li><b>Known Issues</b>
+</ul>
+<h4>Known Issues</h4>
    <ul>
-   <li> libusb-1.0 is currently not installable (#19668). This is already fixed in svn. This can be manually fixed by applying the changes from r45702 by hand.
-   <li> The targets feed is part of opkg.conf, and will produce warnings. It is safe to remove from /etc/opkg.conf.
+   <li> Sysupgrade on brcm47xx may fail by running out of memory when using .bin or .chk files. Please use .trx when using rc1 (it was fixed in rc2).
+   <li> openssl and strongswan are outdated. If you intend to use either of them please update the packages using the snapshots repository: <a href="https://downloads.openwrt.org/snapshots/trunk/">https://downloads.openwrt.org/snapshots/trunk/</a>
+   </ul>
+    
+<h4>Improvements since RC1</h4>
+<ul>
+<li> Fixed broken ImageBuilders for most targets
+<li> Updated kernel 3.18 to 3.18.14
+<li> Fixed broken IPv6 downstream DHCPv6-PD and onlink-route handling
+<li> Images (special format) for Asus brcm47xx and bcm53xx devices
+<li> Improved stability of sysupgrade on brcm47xx and bcm53xx
+<li> Added HTTPS enforcement option to uhttpd
+<li> Fixed umask issue
+<li> Added support for a few new boards
+</ul>
+
    </ul>
 </ul>
 <p>As always a big thank you goes to all our active package maintainers, testers, supporters and documenters. Have fun!<br />&nbsp; &nbsp; The OpenWrt developer team</p>
