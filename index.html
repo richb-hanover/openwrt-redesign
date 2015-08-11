@@ -51,9 +51,9 @@ colorize()
 <div class="box">
 <h3 class="box-title">Headlines</h3>
 <ul>
-<li><a href='#cc-rc1'>Chaos Calmer Release RC1</a></li>
+<li><a href='#cc-rc3'>Chaos Calmer Release RC3</a></li>
 <li><a href='#bb-final'>Barrier Breaker Release</a></li>
-<li><a href='https://forum.openwrt.org/viewtopic.php?pid=272044#p272044'>BattleMesh 8</a></li>
+<li><a href='https://forum.openwrt.org/viewtopic.php?pid=272044#p272044'>BattleMesh 8 uses OpenWrt</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=145689#p145689'>OpenWrt merchandise</a></li>
 <li><a href='https://forum.openwrt.org/viewtopic.php?pid=144733#p144733'>SamKnows to measure European broadband with OpenWrt devices</a></li>
 <li><a href="#earlier">Earlier OpenWrt Releases</a></li>
@@ -123,7 +123,7 @@ Once it's installed and running, most people can simply forget that it's there.
   Most equipment (and most current routers you can purchase today) with a modern processor, 32 megabytes of RAM and 8 Mbytes of flash memory can run the current Barrier Breaker build. 
   The <a href="#earlier">earlier OpenWrt builds</a> are available to install on older or lower-powered routers or equipment.  
 </p>
-<p>If you want to try OpenWrt on your home router, read the guide <a href="http://wiki.openwrt.org/doc/playground">Newcomer's Guide to OpenWrt</a>.
+<p>If you want to try OpenWrt on your home router, read the <a href="http://wiki.openwrt.org/doc/playground">Newcomer's Guide to OpenWrt</a>.
 </p>
 <p> You can use OpenWrt on other kinds of equipment as well. 
 The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devices</a> page lists many other platforms where OpenWrt runs. 
@@ -133,7 +133,7 @@ The <a href="http://wiki.openwrt.org/toh/start">Table of Hardware/Supported Devi
 <p>As we said, we love to write software. 
 <a href="http://wiki.openwrt.org/about/history">We got started</a> in January 2004, when Linksys/Cisco released the source code for their WRT54G router (from which OpenWrt gets its name). 
 We were excited by the opportunity to replace the Linksys software with a more fully-functioning feature set "right out of the box." </p>
-<p>Today, you can start using OpenWrt without a lot of fuss or options. 
+<p>Today, you can start using OpenWrt without a lot of fuss. 
 And it provides thousands of optional packages to add additional capabilities that aren't available with stock firmware. </p>
 <p>
 Furthermore, OpenWrt is built for dozens of different kinds of processors and architectures. 
@@ -149,30 +149,30 @@ The <a href="http://forum.openwrt.org">OpenWrt Forum</a> lets you ask questions 
 </div>
 <!-- -->
 
-<div class='box' id="cc-rc2"><h3 class='box-title'><p>Chaos Calmer 15.05-rc2 - 13 June 2015</p></h3>
-<p>13 June 2015: The OpenWrt developers are proud to announce the second release candidate of OpenWrt Chaos Calmer.</p><div class="codebox"><pre><code>   _______                     ________        __
+<div class='box' id="cc-rc3"><h3 class='box-title'><p>Chaos Calmer 15.05-rc3 - 15 July 2015</p></h3>
+<p>15 July 2015: The OpenWrt developers are proud to announce the third release candidate of OpenWrt Chaos Calmer.</p><div class="codebox"><pre><code>   _______                     ________        __
  |       |.-----.-----.-----.|  |  |  |.----.|  |_
  |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
  |_______||   __|_____|__|__||________||__|  |____|
           |__| W I R E L E S S   F R E E D O M
  -----------------------------------------------------
- CHAOS CALMER (15.05 RC2)
+ CHAOS CALMER (15.05 RC3)
  -----------------------------------------------------
   * 1 1/2 oz Gin            Shake with a glassful
   * 1/4 oz Triple Sec       of broken ice and pour
   * 3/4 oz Lime Juice       unstrained into a goblet.
   * 1 1/2 oz Orange Juice
   * 1 tsp. Grenadine Syrup
- -----------------------------------------------------</code></pre></div><p> -----------------------------------------------------<br /></p>
-
+ -----------------------------------------------------</code></pre></div>
+<p></p>
 <p>
   Chaos Calmer (CC) is the name of the newest release of OpenWrt. 
   It provides a modern Linux kernel with the latest set of tools and packages to provide a stable, powerful, robust platform for software. 
   It is useful for routers (home and commercial) as well as embedded systems. 
-  This announcement is for the second "release candidate" (rc2) - the final CC release is expected be available in mid-2015.
+  This announcement is for the third "release candidate" (rc3) - the final CC release is expected be available in mid-2015.
 </p>
 <p>
-  The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/chaos_calmer/15.05-rc2/" rel="nofollow">http://downloads.openwrt.org/chaos_calmer/15.05-rc2/</a> Most of the detail pages linked from the <a href="http://wiki.openwrt.org/toh/start">Table of Hardware</a> for well-supported routers also have links to the proper image.
+  The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/chaos_calmer/15.05-rc3/" rel="nofollow">http://downloads.openwrt.org/chaos_calmer/15.05-rc3/</a> Most of the detail pages linked from the <a href="http://wiki.openwrt.org/toh/start">Table of Hardware</a> for well-supported routers also have links to the proper image.
 </p>
 <h4>Highlights since the previous (Barrier Breaker, 14.07) release </h4>
 <ul>
@@ -213,10 +213,18 @@ The <a href="http://forum.openwrt.org">OpenWrt Forum</a> lets you ask questions 
 </ul>
 <h4>Known Issues</h4>
    <ul>
-   <li> Sysupgrade on brcm47xx may fail by running out of memory when using .bin or .chk files. Please use .trx when using rc1 (it was fixed in rc2).
-   <li> openssl and strongswan are outdated. If you intend to use either of them please update the packages using the snapshots repository: <a href="https://downloads.openwrt.org/snapshots/trunk/">https://downloads.openwrt.org/snapshots/trunk/</a>
+   <li>  KALLSYMS is active causing some devices to fai
    </ul>
     
+<h4>Improvements since RC2</h4>
+<ul>
+<li> brcmfmac: support for BCM43602
+<li> mt76: updated version with new firmware support, TX &amp; DMA fixes
+<li> Updated kernel to 3.18.17
+<li> Fixed image builder generation
+<li> Various security updates (e.g. openssl, curl)
+<li> Minor fixes
+</ul>
 <h4>Improvements since RC1</h4>
 <ul>
 <li> Fixed broken ImageBuilders for most targets
@@ -254,7 +262,9 @@ of OpenWrt Barrier Breaker.
   -----------------------------------------------------</pre>
 
 </p>
-
+<p>
+  OpenWrt Barrier Breaker (14.07) is the current <em>stable</em> version of OpenWrt. If you are just starting with OpenWrt, the Barrier Breaker (BB) release would be a good choice. 
+</p>
 <p>
   The full set of downloadable images is available from: <a href="http://downloads.openwrt.org/barrier_breaker/14.07/" class="urlextern" title="http://downloads.openwrt.org/barrier_breaker/14.07/" rel="nofollow">http://downloads.openwrt.org/barrier_breaker/14.07/</a> Most of the detail pages for well-supported routers also have links to the proper image.
 </p>
